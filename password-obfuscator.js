@@ -1,21 +1,21 @@
 const string = process.argv[2];
 
-function obfuscator(password) {
-  let pass = "";
+function passwordObfuscator(password) {
+  let newPassword = "";
   for (let i = 0; i < password.length; i++) {
     if (password[i] === "a") {
-      pass += "4";
+      newPassword += "4";
     } else if (password[i] === "e") {
-      pass += "3";
+      newPassword += "3";
     } else if (password[i] === "o") {
-      pass += "0";
+      newPassword += "0";
     } else if (password[i] === "l") {
-      pass += "1";
+      newPassword += "1";
     } else {
-      pass += password[i];
+      newPassword += password[i];
     }
   }
-  console.log(pass);
+  console.log(newPassword);
 }
 
-obfuscator(string);
+passwordObfuscator(string);
